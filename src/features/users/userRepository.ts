@@ -1,6 +1,7 @@
 import { api } from '@/lib/axios';
 import { CreateUserDTO } from './schemas/createUserSchema';
 import { UserRole } from '@/core/domain/user/User';
+import { LoginDTO } from './schemas/loginSchema';
 
 export interface UserResponse {
 	id: number;
@@ -39,5 +40,11 @@ export const getUserById = async (id: number): Promise<UserResponse> => {
 
 export const getAllUsers = async (): Promise<UserResponse[]> => {
 	const response = await api.get('/users');
+	return response.data;
+};
+
+// TODO: Implement proper authentication flow
+export const loginUser = async (body: LoginDTO) => {
+	const response = await api.post('/users/login', body);
 	return response.data;
 };
