@@ -4,7 +4,7 @@ import type React from 'react';
 
 import { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
-import CreateUserForm from '@/features/users/components/CreateUserForm';
+import CreateUserForm from '@/features/users/components/register/CreateUserForm';
 import { UserRole } from '@/core/domain/user/User';
 import { Button } from '@/components/ui/Button';
 import { USER_TYPE_LABELS } from '@/features/users/constants';

@@ -3,8 +3,11 @@
 import { AtSign, LockKeyhole, User } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { createUserSchema, CreateUserDTO } from '../schemas/createUserSchema';
-import { useCreateUser } from '../hooks/useCreateUser';
+import {
+	createUserSchema,
+	CreateUserDTO,
+} from '../../schemas/createUserSchema';
+import { useCreateUser } from '../../hooks/useCreateUser';
 
 import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';

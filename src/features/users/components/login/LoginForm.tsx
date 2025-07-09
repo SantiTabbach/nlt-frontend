@@ -3,9 +3,9 @@ import { Input } from '@/components/ui/Input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AtSign, LockKeyhole } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { LoginDTO, loginSchema } from '../schemas/loginSchema';
+import { LoginDTO, loginSchema } from '../../schemas/loginSchema';
 import { useForm } from 'react-hook-form';
-import useLogin from '../hooks/useLogin';
+import useLogin from '../../hooks/useLogin';
 import { useRouter } from 'next/navigation';
 
 const LoginForm = () => {
