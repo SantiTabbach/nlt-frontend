@@ -3,7 +3,7 @@ import { Shop } from '../shop/Shop';
 
 export class Pack {
 	constructor(
-		public readonly id: string,
+		public readonly id: number,
 		public readonly title: string,
 		public readonly description: string,
 		public readonly imageUrl: string | null,
@@ -13,7 +13,10 @@ export class Pack {
 		public readonly quantityAvailable: number,
 		public readonly quantityReserved: number,
 		public readonly shop: Shop,
-		public readonly reservations: Reservation[]
+		public readonly reservations: Reservation[],
+		public readonly createdAt?: Date,
+		public readonly updatedAt?: Date,
+		public readonly deletedAt: Date | null = null
 	) {}
 
 	/**
@@ -30,14 +33,6 @@ export class Pack {
 	 */
 	isReserved(): boolean {
 		return this.reservations.length > 0;
-	}
-
-	/**
-	 * Returns the total quantity of the pack available for reservation.
-	 * This is the difference between the available quantity and the reserved quantity.
-	 */
-	getAvailableQuantity(): number {
-		return this.quantityAvailable - this.quantityReserved;
 	}
 
 	/**
@@ -74,5 +69,13 @@ export class Pack {
 			month: '2-digit',
 			day: '2-digit',
 		});
+	}
+
+	/**
+	 * Returns the creation date of the user in ISO format.
+	 * If the user was not created, it returns an empty string.
+	 */
+	getCreationDate(): string {
+		return this.createdAt ? this.createdAt.toISOString() : '';
 	}
 }
