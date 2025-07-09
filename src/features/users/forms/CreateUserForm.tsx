@@ -6,9 +6,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { createUserSchema, CreateUserDTO } from '../schemas/createUserSchema';
 import { useCreateUser } from '../hooks/useCreateUser';
 
-import { Input } from '@/core/ui/Input';
-import { Select } from '@/core/ui/Select';
-import { Button } from '@/core/ui/Button';
+import { Input } from '@/components/ui/Input';
+import { Select } from '@/components/ui/Select';
+import { Button } from '@/components/ui/Button';
 import { ROLE_OPTIONS } from '@/features/users/constants';
 import { UserRole } from '@/core/domain/user/User';
 

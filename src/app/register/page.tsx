@@ -6,9 +6,9 @@ import { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import CreateUserForm from '@/features/users/forms/CreateUserForm';
 import { UserRole } from '@/core/domain/user/User';
-import { Button } from '@/core/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { USER_TYPE_LABELS } from '@/features/users/constants';
-import RoleSelector from '@/features/register/RoleSelector';
+import RoleSelector from '@/features/users/components/RoleSelector';
 
 export default function RegisterPage() {
 	const [userType, setUserType] = useState<UserRole | null>(null);

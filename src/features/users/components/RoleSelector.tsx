@@ -1,5 +1,5 @@
 import { UserRole } from '@/core/domain/user/User';
-import { Button } from '@/core/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { USER_TYPE_ICONS } from '@/features/users/constants';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
