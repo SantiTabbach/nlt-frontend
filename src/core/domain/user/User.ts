@@ -6,10 +6,13 @@ export enum UserRole {
 
 export class User {
 	constructor(
-		public readonly id: string,
+		public readonly id: number,
 		public readonly name: string,
-		public readonly email: number,
-		public readonly role: UserRole
+		public readonly email: string,
+		public readonly role: UserRole,
+		public readonly createdAt?: Date,
+		public readonly updatedAt?: Date,
+		public readonly deletedAt: Date | null = null
 	) {}
 
 	/**
@@ -35,5 +38,21 @@ export class User {
 			default:
 				return 'Desconocido';
 		}
+	}
+
+	/**
+	 * Returns the creation date of the user in ISO format.
+	 * If the user was not created, it returns an empty string.
+	 */
+	getCreationDate(): string {
+		return this.createdAt ? this.createdAt.toISOString() : '';
+	}
+
+	/**
+	 * Checks if the user is active.
+	 * An active user is one that has not been deleted.
+	 */
+	isActive(): boolean {
+		return this.deletedAt === null;
 	}
 }
