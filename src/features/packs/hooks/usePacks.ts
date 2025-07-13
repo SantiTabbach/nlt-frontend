@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchPacks } from '../packService';
+
+import { fetchPacks } from '../services/packService';
 
 export function usePacks() {
-	return useQuery({
-		queryKey: ['packs'],
-		queryFn: fetchPacks,
-	});
+  return useQuery({
+    queryKey: ['packs'],
+    queryFn: fetchPacks,
+  });
 }
