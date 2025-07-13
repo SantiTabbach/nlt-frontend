@@ -4,14 +4,18 @@ import { Plus, Store, Package, Calendar, Users, Euro } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+import { PackViewModel } from '@/features/packs/viewModels/packViewModel';
+import { ShopViewModel } from '@/features/shops/viewModels/shopViewModel';
+
 export default function BusinessDashboard() {
-  const [shops, setShops] = useState<[]>([]);
-  const [packs, setPacks] = useState<[]>([]);
+  const shops: ShopViewModel[] = [];
+  const packs: PackViewModel[] = [];
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadData = async () => {
+    const loadData = () => {
       try {
+        console.log('Loading data for business dashboard...');
       } catch (error) {
         console.error('Error loading data:', error);
       } finally {

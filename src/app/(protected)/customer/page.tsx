@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 import Stats from './components/Stats';
 
-import PackList from '@/components/packs/components/PackList';
+import PackList from '@/features/packs/components/PackList';
 import { usePacks } from '@/features/packs/hooks/usePacks';
 
 export default function DashboardPage() {
