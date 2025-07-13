@@ -4,8 +4,7 @@ import { Bell, Search, User, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import Stats from './components/Stats';
-
+import Stats from '@/features/customer/dashboard/components/Stats';
 import PackList from '@/features/packs/components/PackList';
 import { usePacks } from '@/features/packs/hooks/usePacks';
 
