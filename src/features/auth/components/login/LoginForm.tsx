@@ -4,10 +4,11 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import useLogin from '@/features/users/hooks/useLogin';
-import { LoginDTO, loginSchema } from '@/features/users/schemas/loginSchema';
+import useLogin from '../../hooks/useLogin';
+import { LoginDTO, loginSchema } from '../../schemas/loginSchema';
+
+import { Button } from '@/presentation/components/ui/Button';
+import { Input } from '@/presentation/components/ui/Input';
 
 const LoginForm = () => {
   const router = useRouter();

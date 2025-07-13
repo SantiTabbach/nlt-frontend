@@ -4,11 +4,11 @@ import { ArrowLeft } from 'lucide-react';
 import type React from 'react';
 import { useState } from 'react';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/presentation/components/ui/Button';
 import { UserRole } from '@/domain/User';
-import CreateUserForm from '@/features/users/components/register/CreateUserForm';
-import RoleSelector from '@/features/users/components/RoleSelector';
-import { USER_TYPE_LABELS } from '@/features/users/utils/constants';
+import RegisterForm from '@/features/auth/components/register/RegisterForm';
+import RoleSelector from '@/features/auth/components/register/RoleSelector';
+import { USER_TYPE_LABELS } from '@/presentation/utils/users';
 
 export default function RegisterPage() {
   const [userType, setUserType] = useState<UserRole | null>(null);
@@ -34,7 +34,7 @@ export default function RegisterPage() {
               : 'Registrá tu comercio y reducí el desperdicio'}
           </p>
         </div>
-        <CreateUserForm userRole={userType} />
+        <RegisterForm userRole={userType} />
       </div>
     </div>
   );

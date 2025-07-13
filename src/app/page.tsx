@@ -1,8 +1,8 @@
-import CtaSection from '@/components/landing/CtaSection';
-import Features from '@/components/landing/Features';
-import Footer from '@/components/landing/Footer';
-import Header from '@/components/landing/Header';
-import Hero from '@/components/landing/Hero';
+import CtaSection from '@/presentation/components/landing/CtaSection';
+import Features from '@/presentation/components/landing/Features';
+import Footer from '@/presentation/components/landing/Footer';
+import Header from '@/presentation/components/landing/Header';
+import Hero from '@/presentation/components/landing/Hero';
 
 export default function HomePage() {
   return (

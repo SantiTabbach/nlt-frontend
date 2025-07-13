@@ -4,6 +4,16 @@ export enum UserRole {
   ADMIN = 'ADMIN',
 }
 
+export interface UserResponse {
+  id: number;
+  name: string;
+  email: string;
+  role: UserRole;
+  createdAt: string;
+  updatedAt: string;
+  deletedAt: string | null;
+}
+
 export class User {
   constructor(
     public readonly id: number,

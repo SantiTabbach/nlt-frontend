@@ -5,23 +5,20 @@ import { AtSign, LockKeyhole, User } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 import { useCreateUser } from '../../hooks/useCreateUser';
-import {
-  createUserSchema,
-  CreateUserDTO,
-} from '../../schemas/createUserSchema';
+import { RegisterDTO, registerSchema } from '../../schemas/registerSchema';
 import { ROLE_OPTIONS } from '../../utils/constants';
 
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/Select';
+import { Button } from '@/presentation/components/ui/Button';
+import { Input } from '@/presentation/components/ui/Input';
+import { Select } from '@/presentation/components/ui/Select';
 import { UserRole } from '@/domain/User';
 
 interface Props {
   userRole: UserRole;
 }
-const CreateUserForm = ({ userRole }: Props) => {
-  const { register, handleSubmit, reset } = useForm<CreateUserDTO>({
-    resolver: zodResolver(createUserSchema),
+const RegisterForm = ({ userRole }: Props) => {
+  const { register, handleSubmit, reset } = useForm<RegisterDTO>({
+    resolver: zodResolver(registerSchema),
     defaultValues: {
       role: userRole,
     },
@@ -29,7 +26,7 @@ const CreateUserForm = ({ userRole }: Props) => {
 
   const { mutate, isPending } = useCreateUser();
 
-  const onSubmit = (data: CreateUserDTO) => {
+  const onSubmit = (data: RegisterDTO) => {
     mutate(data, {
       onSuccess: () => reset(),
     });
@@ -73,4 +70,4 @@ const CreateUserForm = ({ userRole }: Props) => {
   );
 };
 
-export default CreateUserForm;
+export default RegisterForm;

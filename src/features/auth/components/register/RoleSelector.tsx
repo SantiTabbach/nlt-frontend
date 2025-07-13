@@ -2,9 +2,9 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/presentation/components/ui/Button';
 import { UserRole } from '@/domain/User';
-import { USER_TYPE_ICONS } from '@/features/users/utils/constants';
+import { USER_TYPE_ICONS } from '@/presentation/utils/users';
 
 interface Props {
   setUserType: (type: UserRole) => void;
