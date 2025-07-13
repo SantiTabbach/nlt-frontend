@@ -27,7 +27,7 @@ const Hero = () => {
             </Link>
             <Link
               className="inline-flex h-12 items-center justify-center rounded-md border border-green-600 bg-white px-8 text-sm font-medium text-green-600 shadow-sm transition-colors hover:bg-green-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-600"
-              href="/como-funciona"
+              href="/how-it-works"
             >
               Cómo funciona
             </Link>
